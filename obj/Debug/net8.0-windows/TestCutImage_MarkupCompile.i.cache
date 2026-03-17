@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\WORKSPACE\C#\WPF\Test_1\TestCutImage\obj\Debug\net8.0-windows\
+C:\Data\SotaTek\Projects\Image_Cropping\ImageCropping\obj\Debug\net8.0-windows\
 TestCutImage
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-D:\WORKSPACE\C#\WPF\Test_1\TestCutImage\App.xaml
+C:\Data\SotaTek\Projects\Image_Cropping\ImageCropping\App.xaml
 11407045341
 
 7383095168
-199-497950679
+199859971050
 MainWindow.xaml;
 
-True
+False
 

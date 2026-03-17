@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5zYCsNntbwo=",
+  "dgSpecHash": "uAITBpAsWko=",
   "success": true,
-  "projectFilePath": "D:\\WORKSPACE\\C#\\WPF\\Test_1\\TestCutImage\\TestCutImage.csproj",
+  "projectFilePath": "C:\\Data\\SotaTek\\Projects\\Image_Cropping\\ImageCropping\\TestCutImage.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\opencvsharp4\\4.11.0.20250507\\opencvsharp4.4.11.0.20250507.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\opencvsharp4.runtime.win\\4.11.0.20250506\\opencvsharp4.runtime.win.4.11.0.20250506.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512"
+    "C:\\Users\\admin\\.nuget\\packages\\opencvsharp4\\4.11.0.20250507\\opencvsharp4.4.11.0.20250507.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\opencvsharp4.runtime.win\\4.11.0.20250506\\opencvsharp4.runtime.win.4.11.0.20250506.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512"
   ],
   "logs": []
 }

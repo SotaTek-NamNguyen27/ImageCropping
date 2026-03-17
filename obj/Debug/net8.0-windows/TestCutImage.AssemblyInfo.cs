@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestCutImage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bac2e9df057bc17aed4597614925c2297e6488a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestCutImage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestCutImage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
