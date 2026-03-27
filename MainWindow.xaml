@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestCutImage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Phần Mềm Cắt Ảnh" Height="450" Width="800">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -21,11 +21,12 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Thư mục ảnh:" VerticalAlignment="Center" Margin="0,0,10,0" Width="90"/>
-            <TextBox x:Name="txtInputFolder" Grid.Column="1" VerticalAlignment="Center" IsReadOnly="False" Height="25" VerticalContentAlignment="Center" Padding="5,0"/>
-            <Button x:Name="btnBrowseInput" Grid.Column="2" Content="Chọn thư mục..." Width="100" Height="25" Margin="10,0,0,0" Click="BtnBrowseInput_Click"/>
-
+            <TextBox Grid.Column="1" VerticalAlignment="Center" Height="25" VerticalContentAlignment="Center" Padding="5,0"
+                     Text="{Binding InputFoldersText, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.Column="2" Content="Chọn thư mục..." Width="100" Height="25" Margin="10,0,0,0" 
+                    Command="{Binding BrowseInputCommand}"/>
         </Grid>
-        <!-- Output Folder Selection -->
+
         <Grid Grid.Row="1" Margin="0,0,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -33,19 +34,23 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Thư mục lưu:" VerticalAlignment="Center" Margin="0,0,10,0" Width="90"/>
-            <TextBox x:Name="txtOutputFolder" Grid.Column="1" VerticalAlignment="Center" IsReadOnly="False" Height="25" VerticalContentAlignment="Center" Padding="5,0"/>
-            <Button x:Name="btnBrowseOutput" Grid.Column="2" Content="Chọn thư mục..." Width="100" Height="25" Margin="10,0,0,0" Click="BtnBrowseOutput_Click"/>
+            <TextBox Grid.Column="1" VerticalAlignment="Center" Height="25" VerticalContentAlignment="Center" Padding="5,0"
+                     Text="{Binding OutputFolder, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Grid.Column="2" Content="Chọn thư mục..." Width="100" Height="25" Margin="10,0,0,0" 
+                    Command="{Binding BrowseOutputCommand}"/>
         </Grid>
 
-        <!-- Action Button -->
         <StackPanel Grid.Row="2" Margin="0,10,0,10">
-            <CheckBox x:Name="chkSingleFolder" Content="Lưu gộp chung 1 thư mục (Không giữ nguyên cấu trúc)" Margin="0,0,0,10" FontSize="13" VerticalAlignment="Center"/>
-            <Button x:Name="btnProcess" Content="Bắt đầu cắt ảnh" Height="40" FontWeight="Bold" FontSize="14" Click="BtnProcess_Click"/>
+            <CheckBox Content="Lưu gộp chung 1 thư mục (Không giữ nguyên cấu trúc)" Margin="0,0,0,10" FontSize="13" VerticalAlignment="Center"
+                      IsChecked="{Binding SaveSingleFolder}"/>
+            <Button Content="Bắt đầu cắt ảnh" Height="40" FontWeight="Bold" FontSize="14" 
+                    Command="{Binding ProcessCommand}"/>
         </StackPanel>
 
-        <!-- Logs -->
         <GroupBox Grid.Row="3" Header="Logs">
-            <TextBox x:Name="txtLogs" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontFamily="Consolas"/>
+            <TextBox x:Name="txtLogs" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" FontFamily="Consolas"
+                     Text="{Binding Logs, Mode=OneWay}"
+                     TextChanged="TxtLogs_TextChanged"/>
         </GroupBox>
     </Grid>
 </Window>

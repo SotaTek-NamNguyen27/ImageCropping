@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using OpenCvSharp;
 
-namespace TestCutImage
+namespace TestCutImage.Models
 {
     public class ImageCropper
     {
@@ -87,7 +87,7 @@ namespace TestCutImage
                 progress?.Report("Áp dụng bộ lọc cho phân giải 15360x10240: Chỉ lấy ảnh cắt số 4 và 8.");
             }
 
-            var compressionParams = new ImageEncodingParam(ImwriteFlags.JpegQuality, 100);
+            var compressionParams = new ImageEncodingParam(ImwriteFlags.PngCompression, 3);
 
             Parallel.For(0, boundingBoxes.Count, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, i =>
             {
@@ -99,7 +99,7 @@ namespace TestCutImage
                 {     
                     using (Mat croppedImage = new Mat(originalImage, rect))
                     {
-                        string fileName = Path.Combine(outputDirectory, $"{fileNamePrefix}{currentBoxIndex:D2}.jpg");
+                        string fileName = Path.Combine(outputDirectory, $"{fileNamePrefix}{currentBoxIndex:D2}.png");
                         Cv2.ImWrite(fileName, croppedImage, compressionParams);
 
                         
